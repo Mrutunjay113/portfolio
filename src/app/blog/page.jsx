@@ -3,6 +3,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Home } from "lucide-react";
+import { Suspense } from "react";
 
 async function getBlogPosts() {
   "use server";
@@ -27,7 +28,10 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Blog blogPosts={blogPosts} />
+      {" "}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Blog blogPosts={blogPosts} />{" "}
+      </Suspense>
     </div>
   );
 }
