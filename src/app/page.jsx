@@ -6,22 +6,14 @@ import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { BlogPreview } from "@/components/blog-preview";
 import { connectToDatabase } from "@/lib/mongodb";
+import BlogPost from "@/lib/BlogPost";
 
 async function getBlogPosts() {
-  const db = await connectToDatabase();
+  await connectToDatabase();
 
-  const blogPosts = await db
-    .collection("blogPosts")
-    .find({})
-    .sort({ date: -1 })
-    .toArray(); // Convert the cursor to an array
+  const blogPosts = await BlogPost.find({}).sort({ date: -1 }).lean();
 
-  // Serialize `_id` and format `date`
-  return blogPosts.map((post) => ({
-    ...post,
-    _id: post._id.toString(), // Convert ObjectId to string
-    date: post.date instanceof Date ? post.date.toISOString() : post.date, // Format date
-  }));
+  return blogPosts;
 }
 
 export default async function Home() {
