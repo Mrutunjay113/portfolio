@@ -27,7 +27,6 @@ async function getBlogPosts() {
 
 export default async function Home() {
   const blogPosts = await getBlogPosts();
-  console.log("blogPosts", blogPosts);
 
   return (
     <div className="min-h-screen bg-background pt-16">
