@@ -13,6 +13,7 @@ async function getBlogPosts() {
   const blogPosts = await db
     .collection("blogPosts")
     .find({})
+    .limit(3)
     .sort({ date: -1 })
     .toArray(); // Convert the cursor to an array
 
