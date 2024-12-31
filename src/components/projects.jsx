@@ -5,13 +5,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
     title: "Project 1",
     description:
       "A brief description of Project 1 and its key features. This project showcases my skills in frontend development and user interface design.",
-    image: "/project-1.webp?height=300&width=400",
+    image: "/placeholder.svg?height=300&width=400",
     tags: ["React", "Next.js", "TailwindCSS"],
     liveUrl: "#",
     codeUrl: "#",
@@ -20,7 +21,7 @@ const projects = [
     title: "Project 2",
     description:
       "An overview of Project 2, highlighting the main functionalities and the technologies used. This project demonstrates my backend development and database management skills.",
-    image: "/project-1.webp?height=300&width=400",
+    image: "/placeholder.svg?height=300&width=400",
     tags: ["Vue.js", "Node.js", "MongoDB"],
     liveUrl: "#",
     codeUrl: "#",
@@ -29,7 +30,7 @@ const projects = [
     title: "Project 3",
     description:
       "Details about Project 3, explaining its purpose and the problems it solves. This project illustrates my ability to create cross-platform mobile applications.",
-    image: "/project-1.webp?height=300&width=400",
+    image: "/placeholder.svg?height=300&width=400",
     tags: ["React Native", "Firebase", "Redux"],
     liveUrl: "#",
     codeUrl: "#",
@@ -75,22 +76,22 @@ export function Projects() {
                       </div>
                       <div className="space-x-4">
                         <Button asChild variant="default">
-                          <a
+                          <Link
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             Live Demo
-                          </a>
+                          </Link>
                         </Button>
                         <Button asChild variant="outline">
-                          <a
+                          <Link
                             href={project.codeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             View Code
-                          </a>
+                          </Link>
                         </Button>
                       </div>
                     </div>

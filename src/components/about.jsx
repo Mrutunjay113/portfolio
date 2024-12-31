@@ -10,9 +10,13 @@ const skills = [
   "TypeScript",
   "Node.js",
   "TailwindCSS",
-  "HTML",
-  "CSS",
+  "GraphQL",
   "MongoDB",
+  "PostgreSQL",
+  "Docker",
+  "AWS",
+  "Git",
+  "Figma",
 ];
 
 export function About() {
@@ -38,7 +42,7 @@ export function About() {
                 Hello, I'm Mrutunjay Yadav
               </h3>
               <p className="text-muted-foreground mb-6">
-                I'm a passionate web developer with 1.5 years of experience in
+                I'm a passionate web developer with 5 years of experience in
                 creating responsive and user-friendly websites. My journey in
                 web development started with a curiosity for how things work on
                 the internet, and it has evolved into a fulfilling career where
