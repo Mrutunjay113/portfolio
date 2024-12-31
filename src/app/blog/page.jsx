@@ -5,6 +5,7 @@ import { connectToDatabase } from "@/lib/mongodb";
 import { Home } from "lucide-react";
 
 async function getBlogPosts() {
+  "use server";
   const db = await connectToDatabase();
 
   const blogPosts = await db

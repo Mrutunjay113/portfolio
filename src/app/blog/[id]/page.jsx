@@ -10,20 +10,18 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowLeftSquare } from "lucide-react";
+import BlogPost from "@/lib/BlogPost";
 
 async function getPostById(title) {
+  "use server";
   console.log("title", title);
-  const db = await connectToDatabase();
+  await connectToDatabase();
 
-  const blogPosts = await db
-    .collection("blogPosts")
-    .find({ slug: title })
-    .toArray();
-
+  const blogPosts = await BlogPost.find({ title: title }).lean();
   return blogPosts[0];
 }
 
-export default async function BlogPost({ searchParams }) {
+export default async function BlogPosts({ searchParams }) {
   const { title } = searchParams;
   const post = (await getPostById(title)) || [];
   console.log("post", post);

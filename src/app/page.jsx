@@ -9,6 +9,7 @@ import { connectToDatabase } from "@/lib/mongodb";
 import BlogPost from "@/lib/BlogPost";
 
 async function getBlogPosts() {
+  "use server";
   await connectToDatabase();
 
   const blogPosts = await BlogPost.find({}).sort({ date: -1 }).lean();
