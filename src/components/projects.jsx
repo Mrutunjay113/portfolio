@@ -12,7 +12,7 @@ const projects = [
     title: "Project 1",
     description:
       "A brief description of Project 1 and its key features. This project showcases my skills in frontend development and user interface design.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/image.png?height=300&width=400",
     tags: ["React", "Next.js", "TailwindCSS"],
     liveUrl: "#",
     codeUrl: "#",
@@ -21,7 +21,7 @@ const projects = [
     title: "Project 2",
     description:
       "An overview of Project 2, highlighting the main functionalities and the technologies used. This project demonstrates my backend development and database management skills.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/image.png?height=300&width=400",
     tags: ["Vue.js", "Node.js", "MongoDB"],
     liveUrl: "#",
     codeUrl: "#",
@@ -30,7 +30,7 @@ const projects = [
     title: "Project 3",
     description:
       "Details about Project 3, explaining its purpose and the problems it solves. This project illustrates my ability to create cross-platform mobile applications.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/image.png?height=300&width=400",
     tags: ["React Native", "Firebase", "Redux"],
     liveUrl: "#",
     codeUrl: "#",
